@@ -1,0 +1,58 @@
+---
+title: "hai-project"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(DataExplorer)
+library(tidyverse)
+library(dplyr)
+```
+
+## R Markdown
+
+EDA reports for main dfs
+```{r}
+create_report(MICROBIOLOGYEVENTS)
+create_report(CHARTEVENTS)
+create_report(ADMISSIONS)
+create_report(PATIENTS)
+```
+
+```{r}
+admissions <- as_data_frame(ADMISSIONS)
+microbio_events <- as_data_frame(MICROBIOLOGYEVENTS)
+patients <- as_data_frame(PATIENTS)
+```
+
+```{r}
+demographics <- merge.data.frame(admissions, patients, by = "subject_id")
+demographics
+```
+Number of rows
+```{r}
+nrow(demographics)
+```
+
+Number of distinct rows
+```{r}
+nrow(distinct(demographics))
+```
+
+```{r}
+demographics %>% 
+  mutate(age = floor((dod-dob)/365)) %>%  #label is days (is in years), 9 people are >=300 years old?
+  filter(age < 300) %>% 
+  select(subject_id, insurance, religion, ethnicity, gender, age) %>% 
+  distinct() -> cleaner_demographics
+
+cleaner_demographics
+```
+
+```{r}
+create_report(cleaner_demographics)
+```
+
+
+
+
