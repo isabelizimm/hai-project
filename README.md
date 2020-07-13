@@ -1,7 +1,7 @@
 hai-project
 ==============================
 
-Exploratorion of hospital acquired infections
+Exploration of hospital acquired infections using open demo data from the [MIMIC-III](https://mimic.physionet.org/gettingstarted/access/) dataset. 
 
 Project Organization
 ------------
