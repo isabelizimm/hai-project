@@ -17,6 +17,15 @@ pyarrow = "*"
 cloudpickle = "*"
 alibi = "==0.5.1"
 jupyter = "*"
+argparse = "*"
+importlib.machinery = "*"
+logging = "*"
+os = "*"
+time = "*"
+types = "*"
+urllib.request = "*"
+kafka = "*"
+
 
 [requires]
 python_version = "3.6.5"
