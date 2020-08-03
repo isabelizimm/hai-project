@@ -10,12 +10,7 @@ from kafka import KafkaProducer
 
 #KAFKA_BROKERS=kafka:9092 
 #KAFKA_TOPIC=hai-project
-<<<<<<< HEAD
-#SOURCE_URI=https://github.com/iionez/hai-project/blob/master/data/interim/pt_info_clean.csv
-=======
 #SOURCE_URI=https://raw.githubusercontent.com/iionez/hai-project/master/data/interim/pt_info_clean.csv
->>>>>>> 40fd9f19c740aee124ac586c011c4f3899fcc4c7
-#name=emitter
 
 def external_file_generator(args):
     logging.info('downloading source')
