@@ -8,6 +8,10 @@ import urllib.request as urllib
 
 from kafka import KafkaProducer
 
+KAFKA_BROKERS=kafka:9092 
+KAFKA_TOPIC=hai-project
+SOURCE_URI=https://github.com/iionez/hai-project/blob/master/data/interim/pt_info_clean.csv
+name=emitter
 
 def external_file_generator(args):
     logging.info('downloading source')
@@ -68,11 +72,6 @@ def parse_args(parser):
     args.source = get_arg('SOURCE_URI', args.source)
     args.userfunction = get_arg('USER_FUNCTION_URI', args.userfunction)
     return args
-
-KAFKA_BROKERS=kafka:9092 
-KAFKA_TOPIC=bones-brigade
-SOURCE_URI=https://github.com/iionez/hai-project/blob/master/data/interim/pt_info_clean.csv
-name=emitter
   
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
