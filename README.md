@@ -2,7 +2,7 @@ Explainability with
 ==============================
 
 Exploration of hospital acquired infections using open demo data from the [MIMIC-III](https://mimic.physionet.org/gettingstarted/access/) dataset. 
-To see the project journey and insights, visit [this blog post](iionez.github.io).
+To see the project journey and insights, visit [this blog post](https://iionez.github.io).
 
 Project Organization
 ------------
