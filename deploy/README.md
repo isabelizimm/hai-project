@@ -24,8 +24,11 @@ using the [command line client tool](https://docs.okd.io/latest/cli_reference/ge
 
 1. Create your PostgreSQL database within your OpenShift environment by following the commands in
 `oc new-app \
+
 -e POSTGRESQL_USER=mimic \ 
+
 -e POSTGRESQL_DATABASE=mimc \ 
+
 openshift/postgresql:9.6`
 
 2. Connect PostgeSQL to Superset by
@@ -42,21 +45,31 @@ openshift/postgresql:9.6`
 
 
 BONUS: Kafka
+
 Kafka Python Emitter
+
 To use Kafka to stream data to OpenShift, use the `kafka-app.py` viewable [here]('./kafka/kafka-app.py')
 
 This application will simply take the lines from pt_info_cleaned.csv and then send the lines from that file to the topic and brokers specified through the environment variables.
 
 1. Launch the emitter using the following command
 `oc new-app centos/python-36-centos7~https://gitlab.com/bones-brigade/kafka-python-emitter.git \
+
   -e KAFKA_BROKERS=kafka:9092 \
+  
   -e KAFKA_TOPIC=odh-hai \
+  
   -e KAFKA_TOPIC=odh-hai \
+  
   -e SOURCE_URI=https://raw.githubusercontent.com/iionez/hai-project/master/data/processed/pt_info_clean.csv  \
+  
   --name=kafka-emitter`
   
 2. Launch the listener with the following command
 `oc new-app centos/python-36-centos7~https://gitlab.com/bones-brigade/kafka-python-listener.git \
+
   -e KAFKA_BROKERS=kafka:9092 \
+  
   -e KAFKA_TOPIC=odh-hai \
+  
   --name=kafka-listener`
