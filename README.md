@@ -20,21 +20,19 @@ We'll explore HAIs here and look at the difference between demographic and patie
 
 #### Install the notebooks and dependencies
 
-1.  Clone this repository:  `git clone https://github.com/willb/ml-workflows-notebook/`
-    - tip:  if you don't have `git` installed, you can also [download an archive of this repository](https://github.com/willb/ml-workflows-notebook/archive/master.zip)
-2.  Change to this repository's directory:  `cd ml-workflows-notebook`
+1.  Clone this repository:  `git clone https://github.com/iionez/hai-project/`
+2.  Change to this repository's directory:  `cd hai-project`
 3.  Install the dependencies:  `pipenv install --skip-lock`
 4.  Run the notebooks:  `pipenv run jupyter notebook`
 
 #### Running the lab on an OpenShift cluster:
 
-The `deploy` notebook contains information on how to set up integrations
+The `deploy` notebook contains information on how to set up integration with an OpenShift client and Apache Superset.
 
 ## Project Organization
 
     ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
-    ├── README.md          <- The top-level README for developers using this project.
+    ├── README.md
     ├── data
     │   ├── interim        <- Intermediate data that has been transformed.
     │   ├── processed      <- The final, canonical data sets for modeling.
@@ -42,24 +40,14 @@ The `deploy` notebook contains information on how to set up integrations
     │
     ├── models             <- Trained and serialized models
     │
+    ├── deploy             <- Instructions on how to set up with OpenShift and Superset
+    │
     ├── notebooks          <- Jupyter notebooks
     │
     ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
     │   └── figures        <- Generated graphics and figures
     │
     ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
     └── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
                               generated with `pip freeze > requirements.txt`
 

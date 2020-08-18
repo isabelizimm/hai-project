@@ -17,6 +17,8 @@ pyarrow = "*"
 cloudpickle = "*"
 alibi-detect = "==0.4.1"
 jupyter = "*"
+sqlalchemy = "*"
+psycopg2-binary = "*"
 
 # local package
 -e .
