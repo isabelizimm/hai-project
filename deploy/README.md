@@ -12,11 +12,11 @@ using the [command line client tool](https://docs.okd.io/latest/cli_reference/ge
 
 ### Download Open Data Hub
 
-Once inside your OpenShift environment, install Red Hat's AI-as-a-Service platform, Open Data Hub, using the instructions [here](https://opendatahub.io/docs/getting-started/quick-installation.html), when creating a KfDef in step 4 of "Create a New Open Data Hub Deployment," use the [odh-hai-deploy.yaml]('./odh-hai-deploy.yaml') file rather than the code given in the Open Data Hub installation guide.
+Once inside your OpenShift environment, install Red Hat's AI-as-a-Service platform, Open Data Hub, using the instructions [here](https://opendatahub.io/docs/getting-started/quick-installation.html), when creating a KfDef in step 4 of "Create a New Open Data Hub Deployment," use the [odh-hai-deploy.yaml]('./odh-hai-deploy.yaml') file rather than the YAML given in the Open Data Hub installation guide.
 
 ### Load this repo into your cluster
 
-Use ODH's JupyterHub capabilities to add this repo to your namespace.
+Load the Open Data Hub application JupyterHub. On the landing page, copy the link to this repo where prompted.
 
 ### Create a PostgreSQL database
 
@@ -24,13 +24,13 @@ Use ODH's JupyterHub capabilities to add this repo to your namespace.
 
 2. Enter into this service's CLI with `oc rsh postgresql-X-XXXXX`, where the X's are replaced by the full name of the pod (full name is retrievable by `oc get pods`).
 
-3. Once in the remote shell, use the command `psql -d haidemo` to create a database named **haidemo**.
+3. Once in the remote shell, use the command `psql -d postgres` to connect to PostgreSQL. Once inside, use the SQL command `CREATE DATABASE haidemo;` to create your **haidemo** database.
 
 4. To exit the database, type `\quit` 
 
 5. To exit the remote shell, type `exit`
 
-6. Follow the guide notebook [superset-pg-setup]('./superset-pg-setup.ipynb') to create an engine to upload your data into the PostgreSQL database and create a URI to connect the database to other applications.
+6. Follow the notebook [superset-pg-setup]('./superset-pg-setup.ipynb') to create an engine to upload your data into the PostgreSQL database and create a URI to connect the database to other applications.
  
 
 ### Explore the data more in Superset
