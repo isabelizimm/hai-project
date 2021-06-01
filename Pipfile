@@ -16,10 +16,12 @@ vega = "*"
 pyarrow = "*"
 cloudpickle = "*"
 alibi-detect = "*"
+alibi = "*"
 jupyter = "*"
 sqlalchemy = "*"
 psycopg2-binary = "*"
 matplotlib = "*"
+shap = "*"
 
 [requires]
 python_version = "3.7"
