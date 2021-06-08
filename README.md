@@ -5,12 +5,12 @@ We'll explore HAIs here and look at the difference between demographic and patie
 
 ## Getting Started
 
+This repo exists on the [Operate First](https://www.operate-first.cloud/) environment. All you need to get started is  
+
 #### Install the prerequisites
 
-1. Make sure you have Python 3.7 installed, installing it if necessary
-    - If you have a favorite package manager, use that
-    - if not, [python.org](https://www.python.org/downloads/) has binaries for many platforms
-2. Make sure you have `git` installed, installing it if necessary
+1. To interact with the notebooks, click [here](https://odh.operate-first.cloud/).
+2. Login with your Google account
     - If you have a favorite package manager, use that
     - if not, [git-scm.com](https://git-scm.com/downloads) has binaries for many platforms (you won't need a GUI)
 3. Install [pipenv](https://docs.pipenv.org/en/latest/)
