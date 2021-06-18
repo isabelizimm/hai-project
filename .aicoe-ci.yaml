@@ -9,5 +9,5 @@ build:
   custom-tag: latest
   registry: quay.io
   registry-org: aicoe
-  registry-project: izimmerm-bbuzz-2021
+  registry-project: hai-project
   registry-secret: aicoe-pusher-secret
